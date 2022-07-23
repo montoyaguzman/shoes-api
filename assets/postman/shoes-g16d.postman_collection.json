@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "de3c3e19-7f3a-4a5c-adab-78100f8e1584",
+		"name": "shoes-g16d",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3934865"
+	},
+	"item": [
+		{
+			"name": "root-dummy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dummy/hola",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dummy",
+						"hola"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/shoes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAll",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/shoes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shoes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "237"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"ed-z+rSeB9F3Tp4DM8xZnCW4APNmaE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Jul 2022 18:49:34 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"brand\": \"noke\",\n        \"price\": 200,\n        \"size\": 29\n    },\n    {\n        \"id\": 2,\n        \"brand\": \"edidas\",\n        \"price\": 500,\n        \"size\": 22\n    },\n    {\n        \"id\": 3,\n        \"brand\": \"floxi\",\n        \"price\": 900,\n        \"size\": 25\n    },\n    {\n        \"id\": 4,\n        \"brand\": \"pima\",\n        \"price\": 1900,\n        \"size\": 24\n    },\n    {\n        \"id\": 5,\n        \"brand\": \"gassi\",\n        \"price\": 1100,\n        \"size\": 23\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getAll with queryParams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/shoes/?price=1000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						""
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/shoes/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 6,\n    \"brand\": \"punum\",\n    \"price\": 400,\n    \"size\": 21\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/shoes/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 6,\n    \"brand\": \"punum\",\n    \"price\": 400,\n    \"size\": 21\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/shoes/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shoes",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Jul 2022 18:51:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "partialEdit",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"floxi 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/shoes/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completeEdit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"juumma\",\n    \"price\": 777,\n    \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/shoes/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/shoes/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
