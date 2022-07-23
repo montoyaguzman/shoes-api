@@ -58,7 +58,6 @@ shoesRouter.post('/', async (req, res) => {
 shoesRouter.patch('/:id', async (req, res) => {
     const body = req.body;
     const { id } = req.params;
-    console.log('route', id)
     try {
         await shoeService.editPartial(id, body);
         res.status(200).send( { message: 'modificacion patch exitosa!', id } );

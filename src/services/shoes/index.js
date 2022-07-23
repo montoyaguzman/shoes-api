@@ -55,7 +55,6 @@ class ShoesServices {
     }
 
     editPartial(id, body) {
-        console.log('service', id)
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const indexFounded = this.shoes.findIndex(shoe => shoe.id === parseInt(id));
