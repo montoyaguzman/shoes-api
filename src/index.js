@@ -1,13 +1,12 @@
 // 1 Importaciones de componentes necesarios
 const express = require('express');
-const colors = require('colors');
 
 // CORS
 const cors = require('cors');
 
 // 2 Declaración de variables para levantar el servidor
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 // 3 Obtener los routes
 const routerApi = require('./routes/main.controller');
 // 4 Agregar middleware para uso de req.body
@@ -34,7 +33,7 @@ app.get('/', (req, res) => {
 
 // 5 Levantar el servidor
 app.listen(port, () => {
-    console.log('Servidor express listening...'.rainbow);
+    console.log('Servidor express listening...');
 });
 // 6 Agregar el route a la app
 routerApi(app);
